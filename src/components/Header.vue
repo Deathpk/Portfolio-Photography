@@ -16,9 +16,31 @@
           <router-link to="/about">Sobre</router-link>
         </v-btn>
 
+        <v-menu offset-y>
+          <template v-slot:activator="{ on }">
+            <v-btn text
+              v-on="on"
+            >
+              Categorias
+            </v-btn>
+          </template>
+          <v-list>
+            <v-list-item
+              v-for="(category) in categories"
+              :key="category.id"
+            >
+              <v-list-item-title>
+                <router-link :to="category.to">{{category.name}}</router-link>
+              </v-list-item-title>
+            </v-list-item>
+          </v-list>
+        </v-menu>
+
         <v-btn text>
           <router-link to="/contact">Contato</router-link>
         </v-btn>
+
+
       </v-toolbar-items>
 
       <!-- Responsive Menu -->
@@ -30,19 +52,25 @@
           <v-list class="responsiveMenu">
               <v-list-item>
                 <v-list-item-title>
-                  <router-link to="/">HOME</router-link>
+                  <router-link to="/">Inicio</router-link>
                 </v-list-item-title>
               </v-list-item>
               
               <v-list-item>
                 <v-list-item-title>
-                  <router-link to="/about">ABOUT</router-link>
+                  <router-link to="/about">Sobre</router-link>
+                </v-list-item-title>
+              </v-list-item>
+
+               <v-list-item>
+                <v-list-item-title>
+                  <router-link to="/contact">Categorias</router-link>
                 </v-list-item-title>
               </v-list-item>
 
               <v-list-item>
                 <v-list-item-title>
-                  <router-link to="/contact">Contact</router-link>
+                  <router-link to="/contact">Contato</router-link>
                 </v-list-item-title>
               </v-list-item>
 
@@ -59,7 +87,10 @@
     name: 'Header',
 
     data: () => ({
-      
+        categories:[
+          { id: 1 , name:'Ensaios' , to:'/rehearsals'},
+          { id:2 , name:'Casamentos' , to:'/weddings'}
+        ]
     }),
   }
 </script>

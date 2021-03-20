@@ -2,7 +2,7 @@
 
  <v-content>
    <Hero/>
-   <Gallery/>
+   <HighLights/>
    <LatestPost/>
  </v-content>    
  
@@ -10,20 +10,15 @@
 
 <script>
  import Hero from '../components/Hero';
- import Gallery from '../components/Gallery';
+ import HighLights from './HighLights';
  import LatestPost from '../components/LatestPost';
 
-  export default {
-    name: 'Home',
-    components: {
-      Hero,
-      Gallery,
-      LatestPost
-    },
-
-   data(){
-
-   }
-      
-  }
+export default {
+  name: 'Home',
+  components: {
+    Hero,
+    HighLights,
+    LatestPost
+  },
+}
 </script>

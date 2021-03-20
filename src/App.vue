@@ -16,16 +16,12 @@
   import Header from './components/Header';
   import Footer from './components/Footer';
 
-  export default {
-    name: 'App',
+export default {
+  name: 'App',
 
-    components: {
-      Header,
-      Footer
-    },
-
-    data: () => ({
-      
-    }),
-  };
+  components: {
+    Header,
+    Footer
+  },
+}
 </script>

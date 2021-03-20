@@ -6,6 +6,8 @@ import VueRouter from 'vue-router';
 import Home from './views/Home';
 import About from './views/About';
 import Contact from './views/Contact';
+import Rehearsals from './views/Rehearsals';
+import Weddings from './views/Weddings';
 import NotFound from './views/NotFound';
 
 Vue.use(VueRouter)
@@ -15,10 +17,12 @@ const router = new VueRouter({
   routes: [
     { path: '/', component: Home },
     { path: '/about', component: About },
-    { path: '/contact',component: Contact },
-    { path: '*', component: NotFound }
+    { path: '/contact', component: Contact },
+    { path: '/rehearsals', component: Rehearsals},
+    { path: '/weddings', component: Weddings},
+    { path: '*', component: NotFound },
   ]
-})
+});
 
 Vue.config.productionTip = false
 
