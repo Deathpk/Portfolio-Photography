@@ -9,11 +9,11 @@
 
       <v-toolbar-items class="hidden-xs-only">
         <v-btn text>
-         <router-link to="/">Inicio</router-link>
+         <router-link class="black--text" to="/">Inicio</router-link>
         </v-btn>
 
         <v-btn text>
-          <router-link to="/about">Sobre</router-link>
+          <router-link class="black--text" to="/about">Sobre</router-link>
         </v-btn>
 
         <v-menu offset-y>
@@ -30,14 +30,14 @@
               :key="category.id"
             >
               <v-list-item-title>
-                <router-link :to="category.to">{{category.name}}</router-link>
+                <router-link class="black--text" :to="category.to">{{category.name}}</router-link>
               </v-list-item-title>
             </v-list-item>
           </v-list>
         </v-menu>
 
         <v-btn text>
-          <router-link to="/contact">Contato</router-link>
+          <router-link class="black--text" to="/contact">Contato</router-link>
         </v-btn>
 
 

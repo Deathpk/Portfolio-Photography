@@ -9,7 +9,9 @@ import Contact from './views/Contact';
 import Rehearsals from './views/Rehearsals';
 import Weddings from './views/Weddings';
 import NotFound from './views/NotFound';
+import Lightbox from 'vue-easy-lightbox'
 
+Vue.use(Lightbox)
 Vue.use(VueRouter)
 
 const router = new VueRouter({
