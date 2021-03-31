@@ -38,8 +38,8 @@
           </v-list>
         </v-menu>
 
-        <v-btn text>
-          <router-link class="black--text" to="/contact">Contato</router-link>
+        <v-btn text @click="goToContactSession()">
+          Contato
         </v-btn>
 
 
@@ -51,32 +51,47 @@
           <template v-slot:activator="{ on }">
             <v-app-bar-nav-icon v-on="on" ></v-app-bar-nav-icon>
           </template>
-          <v-list class="responsiveMenu">
+            <v-list class="responsiveMenu">
               <v-list-item>
-                <v-list-item-title>
-                  <router-link to="/">Inicio</router-link>
+                <v-list-item-title @click="gotoHomeSession()">
+                  Inicio
                 </v-list-item-title>
               </v-list-item>
               
               <v-list-item>
-                <v-list-item-title>
-                  <router-link to="/about">Sobre</router-link>
+                <v-list-item-title @click="goToAboutSession()">
+                  Sobre
                 </v-list-item-title>
               </v-list-item>
 
-               <v-list-item>
-                <v-list-item-title>
-                  <router-link to="/contact">Categorias</router-link>
-                </v-list-item-title>
-              </v-list-item>
+                <v-list-item>
+                  <v-menu offset-y>
+                    <template v-slot:activator="{ on }">
+                      <v-list-item-title v-on="on">
+                        Categorias
+                      </v-list-item-title>
+                    </template>
+                    <v-list>
+                      <v-list-item
+                        v-for="(category) in categories"
+                        :key="category.id"
+                      >
+                        <v-list-item-title
+                        class="pointer"
+                        @click="goToSelectedCategory(category.to)">
+                          {{ category.name }}
+                        </v-list-item-title>
+                      </v-list-item>
+                    </v-list>
+                  </v-menu>
+                </v-list-item>
 
               <v-list-item>
-                <v-list-item-title>
-                  <router-link to="/contact">Contato</router-link>
+                <v-list-item-title @click="goToContactSession()">
+                  Contato
                 </v-list-item-title>
               </v-list-item>
-
-          </v-list>
+            </v-list>
       </v-menu>
       </div>
     </v-toolbar>
@@ -103,6 +118,9 @@
       },
       goToSelectedCategory(category){
         this.$router.push({ name:category })
+      },
+      goToContactSession(){
+        this.$router.push( { name:"contact" } )
       }
     }
   }
