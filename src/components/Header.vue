@@ -8,12 +8,12 @@
       <v-spacer></v-spacer>
 
       <v-toolbar-items class="hidden-xs-only">
-        <v-btn text>
-         <router-link class="black--text" to="/">Inicio</router-link>
+        <v-btn text @click="gotoHomeSession()">
+          Inicio
         </v-btn>
 
-        <v-btn text>
-          <router-link class="black--text" to="/about">Sobre</router-link>
+        <v-btn text @click="goToAboutSession()">
+          Sobre
         </v-btn>
 
         <v-menu offset-y>
@@ -29,8 +29,10 @@
               v-for="(category) in categories"
               :key="category.id"
             >
-              <v-list-item-title>
-                <router-link class="black--text" :to="category.to">{{category.name}}</router-link>
+              <v-list-item-title
+              class="pointer"
+              @click="goToSelectedCategory(category.to)">
+                {{ category.name }}
               </v-list-item-title>
             </v-list-item>
           </v-list>
@@ -88,9 +90,26 @@
 
     data: () => ({
         categories:[
-          { id: 1 , name:'Ensaios' , to:'/rehearsals'},
-          { id:2 , name:'Casamentos' , to:'/weddings'}
+          { id: 1 , name:'Ensaios' , to:'rehearsals'},
+          { id:2 , name:'Casamentos' , to:'weddings'}
         ]
     }),
+    methods:{
+      gotoHomeSession(){
+        this.$router.push( { name:"home" } )
+      },
+      goToAboutSession(){
+        this.$router.push( { name:"about" } )
+      },
+      goToSelectedCategory(category){
+        this.$router.push({ name:category })
+      }
+    }
   }
 </script>
+
+<style scoped>
+.pointer{
+  cursor:pointer;
+}
+</style>

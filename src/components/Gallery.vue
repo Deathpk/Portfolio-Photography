@@ -13,7 +13,7 @@
                         :src="item.src"
                         :lazy-src="item.src"
                         aspect-ratio="1"
-                        class="grey lighten-2"
+                        class="grey lighten-2 pointer"
                         @click="showImg(index)"
                     >
                         <template v-slot:placeholder>
@@ -70,3 +70,9 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+.pointer{
+  cursor:pointer;
+}
+</style>

@@ -1,9 +1,9 @@
 <template>
- <v-content>
+ <v-main>
     <Gallery 
     :items="items"
     :title="'Ensaios'"/>
- </v-content>    
+ </v-main>    
 </template>
 
 <script>

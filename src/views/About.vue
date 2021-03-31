@@ -1,11 +1,11 @@
 <template>
-  <v-content>
+  <v-main>
     <div class="staticHero">
       <v-img :src= heroImg height="25rem">
         <v-row align="end" class="lightbox white--text pa-2 fill-height">
           <v-col>
             <v-container>
-              <div class="headline">About</div>
+              <div class="headline">Sobre</div>
             </v-container>
           </v-col>
         </v-row>
@@ -37,7 +37,7 @@
         </v-row>
       </v-container>
     </div>
-  </v-content>    
+  </v-main>    
 </template>
 
 <script>

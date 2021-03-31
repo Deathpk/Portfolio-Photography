@@ -1,10 +1,10 @@
 <template>
 
- <v-content>
+ <v-main>
    <Hero/>
    <HighLights/>
    <LatestPost/>
- </v-content>    
+ </v-main>    
  
 </template>
 

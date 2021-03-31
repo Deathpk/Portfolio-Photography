@@ -17,11 +17,11 @@ Vue.use(VueRouter)
 const router = new VueRouter({
   mode:'history',
   routes: [
-    { path: '/', component: Home },
-    { path: '/about', component: About },
-    { path: '/contact', component: Contact },
-    { path: '/rehearsals', component: Rehearsals},
-    { path: '/weddings', component: Weddings},
+    { path: '/', name:'home',component: Home },
+    { path: '/about', name:'about', component: About },
+    { path: '/contact', name:'contact', component: Contact },
+    { path: '/rehearsals', name:'rehearsals', component: Rehearsals},
+    { path: '/weddings', name:'weddings',component: Weddings},
     { path: '*', component: NotFound },
   ]
 });
