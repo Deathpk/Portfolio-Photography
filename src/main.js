@@ -17,13 +17,17 @@ Vue.use(VueRouter)
 const router = new VueRouter({
   mode:'history',
   routes: [
-    { path: '/', name:'home',component: Home },
-    { path: '/about', name:'about', component: About },
-    { path: '/contact', name:'contact', component: Contact },
-    { path: '/rehearsals', name:'rehearsals', component: Rehearsals},
-    { path: '/weddings', name:'weddings',component: Weddings},
+    { path: '/', name:'home', meta:{title:'Inicio'},component: Home },
+    { path: '/about', name:'about', meta:{title:'Sobre'}, component: About },
+    { path: '/contact', name:'contact', meta:{title:'Contato'},  component: Contact },
+    { path: '/rehearsals', name:'rehearsals', meta:{title:'Ensaios'}, component: Rehearsals},
+    { path: '/weddings', name:'weddings', meta:{title:'Casamentos'}, component: Weddings},
     { path: '*', component: NotFound },
   ]
+});
+router.beforeEach((to, from ,next) => {
+  document.title = to.meta.title
+  next()
 });
 
 Vue.config.productionTip = false

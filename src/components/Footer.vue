@@ -4,6 +4,8 @@
             <v-footer
             padless
             >
+            <v-row>
+                <v-col>
                 <v-card
                 flat
                 tile
@@ -11,27 +13,24 @@
                 >
                     <v-card-text>
                         <v-btn
-                        v-for="icon in icons"
-                        :key="icon"
+                        v-for="social in socialMedia"
+                        :key="social.icon"
                         class="mx-4 "
+                        :href="social.link"
                         icon
                         >
                             <v-icon size="24px">
-                                {{ icon }}
+                                {{ social.icon }}
                             </v-icon>
                         </v-btn>
                     </v-card-text>
-
-                    <v-card-text class="pt-0">
-                       Phasellus feugiat arcu sapien, et iaculis ipsum elementum sit amet. Mauris cursus commodo interdum. Praesent ut risus eget metus luctus accumsan id ultrices nunc. Sed at orci sed massa consectetur dignissim a sit amet dui. Duis commodo vitae velit et faucibus. Morbi vehicula lacinia malesuada. Nulla placerat augue vel ipsum ultrices, cursus iaculis dui sollicitudin. Vestibulum eu ipsum vel diam elementum tempor vel ut orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                    </v-card-text>
-
-                    <v-divider></v-divider>
-
+                    
                     <v-card-text>
                         {{ new Date().getFullYear() }} — Feito com <v-icon style="color:red;">mdi-heart</v-icon> por <strong>MichelVersiani</strong>
                     </v-card-text>
                 </v-card>
+                </v-col>
+            </v-row>
             </v-footer>  
         </v-container>
     
@@ -42,11 +41,11 @@ export default {
     name: 'Footer',
     data(){
         return{
-            icons: [
-                'mdi-facebook',
-                'mdi-twitter',
-                'mdi-linkedin',
-                'mdi-instagram',
+            socialMedia: [
+                { icon:'mdi-facebook', link:"https://www.facebook.com/"},
+                { icon:'mdi-twitter', link:"https://twitter.com/home?lang=pt"},
+                { icon:'mdi-linkedin', link:"https://www.facebook.com/"},
+                { icon:'mdi-instagram', link:"https://www.facebook.com/"},
             ],
         }
     }
