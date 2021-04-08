@@ -26,7 +26,7 @@
                     </v-card-text>
                     
                     <v-card-text>
-                        {{ new Date().getFullYear() }} — Feito com <v-icon style="color:red;">mdi-heart</v-icon> por <strong>MichelVersiani</strong>
+                        {{ new Date().getFullYear() }} — Feito com <v-icon style="color:red;">mdi-heart</v-icon> por <strong>MichelVersianiDev</strong>
                     </v-card-text>
                 </v-card>
                 </v-col>
