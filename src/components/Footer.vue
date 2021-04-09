@@ -44,7 +44,7 @@ export default {
             socialMedia: [
                 { icon:'mdi-facebook', link:"https://www.facebook.com/"},
                 { icon:'mdi-twitter', link:"https://twitter.com/home?lang=pt"},
-                { icon:'mdi-linkedin', link:"https://www.linkedin.com"},
+                { icon:'mdi-linkedin', link:"https://www.linkedin.com/feed"},
                 { icon:'mdi-instagram', link:"https://www.instagram.com/"},
             ],
         }
