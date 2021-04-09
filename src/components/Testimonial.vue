@@ -40,12 +40,12 @@ export default {
         return {
             items:[
                 { name:"Nelson Jhony Bravo",
-                  src: require('../assets/images/Nelsola.jpg'),
+                  src: require('../assets/images/Andin.jpg'),
                   role:"Diretor executivo - Elementary Engenharia",
                   testimony:"Trabalho com o Anderson a anos , assim que temos um evento novo de lançamento de algum produto , já deixamos marcado uma sessão de fotos para divulgar os momentos uma semana antes , Recomendo muito!"
                 },
                  { name:"Robson Garcia Valentim",
-                  src: require('../assets/images/Bernardo.jpg'),
+                  src: require('../assets/images/Andin.jpg'),
                   role:"Tech Lead - Today's Artisans",
                   testimony:"Sempre contratamos o Anderson para salvar os momentos importantes dos eventos de nossa empresa. É um profissional dedicado , eu diria diferenciado , conversando sempre abertamente com o cliente , e sempre propondo ideias para melhorias."
                 },
