@@ -74,14 +74,14 @@
          {
           title: 'Facebook',
           src: require('../assets/images/facebookLogo.jpg'),
-          desc:'Tire dúvidas , faça orçamentos , pergunte sobre a agenda via Whatsapp',
+          desc:'Visite nossa página no facebook , e nos mande um direct.',
           btnColor:'blue'
          },
 
           {
           title: 'E-mail',
           src: require('../assets/images/gmailLogo.png'),
-          desc:'Tire dúvidas , faça orçamentos , pergunte sobre a agenda via Whatsapp',
+          desc:'Nos envie um e-mail com dúvidas , pedidos de orçamentos e etc.',
           btnColor:'red'
          },
 
