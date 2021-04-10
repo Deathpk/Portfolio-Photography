@@ -1,6 +1,6 @@
 <template>
 
- <v-content>
+ <v-main>
     <div class="staticHero">
       <v-img :src= heroImg height="25rem">
         <v-row align="end" class="lightbox white--text pa-2 fill-height">
@@ -51,7 +51,7 @@
       </v-container>
     </div>
 
- </v-content>    
+ </v-main>    
  
 </template>
 
