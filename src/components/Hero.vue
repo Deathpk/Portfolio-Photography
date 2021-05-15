@@ -6,8 +6,9 @@
         v-for="(item,i) in items"
         :key="i"
         :src="item.src"
-        reverse-transition="fade-transition"
-        transition="fade-transition"
+        reverse-transition="slide-x-transition"
+        transition="slide-x-transition"
+        eager
         >
             <v-row class="fill-height title hidden-xs-only" align="center" justify="center">
                 <div>
