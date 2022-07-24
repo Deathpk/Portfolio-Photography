@@ -22,16 +22,17 @@
         <v-row class="profile-wrapper">
           <v-col cols="12" md="4" v-for="item in items" :key="item.id">
 
-            <v-card class="mx-auto" max-width="400">
-              <v-img class=" white--text align-end"
-                height="200px"
+            <v-card class="mx-auto" max-width="400" elevation="0">
+              <v-img class=" white--text align-end rounded-circle"
+                height="350px"
+                width="400px"
                 :src="item.src"
               >
               </v-img>
 
               <v-card-text class="text--primary">
-                <div class="title">{{item.name}}</div>
-                <p>{{item.title}}</p>
+                <div class="title name">{{item.name}}</div>
+                <p class="role">{{item.title}}</p>
               </v-card-text>
             </v-card>
             
@@ -39,7 +40,7 @@
         </v-row>
       </v-container>
       
-      <v-container>
+      <v-container class="presentation">
         <p>Eu sou Anderosn Nunes, fotógrafo e filmmaker, Geógrafo, e natural de Salvador. Com vasta experiência em captação de imagens, já trabalhei em eventos esportivos, documentários, curtas metragens, viagens e programas culturais. Atualmente, estou diretor de fotografia no Rural Produtivo, um programa da TVE Bahia. Como freelancer meu objetivo é usar a fotografia e o audiovisual como ferramenta para projetos que visam o desenvolvimento e o bem estar social, priorizando a preservação de paisagens naturais, a valorização de pessoas, culturas e saberes. Se a sua marca ou empresa tem isso no DNA, entre em contato.</p>
       </v-container>
     </div>
@@ -60,18 +61,6 @@
            name:'Anderson Nunes',
            title:'Fotografo'
           },
-          // {
-          //  id:2,
-          //  src: require('../assets/images/Nelsola.jpg'),
-          //  name:'Jubileu Neymar Santos',
-          //  title:'Manager'
-          // },
-          // {
-          //  id:3,
-          //  src: require('../assets/images/Bernardo.jpg'),
-          //  name:'Robson Garcia Valentim',
-          //  title:'Photographer'
-          // }
        ]
      }
      
@@ -85,11 +74,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding:40px;
+    padding:30px;
   }
-  .profile{
-    border-radius: 50%;
-    height: 100%;
-    width: 80%;
+  .role {
+    font-weight: bold;
+  }
+  .presentation {
+    font-size: large;
+    font-style: italic;
   }
 </style>
