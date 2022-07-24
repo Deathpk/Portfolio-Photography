@@ -2,33 +2,41 @@
     <div class="block">
         <v-container>
             <h2 class="text-center">Depoimentos</h2>
-
-            <v-row class="wrapper">
-                <v-col cols="12" md="4" v-for="item in items" :key="item.name">
+            <v-carousel hide-delimiters cycle>
+              <v-carousel-item v-for="item in items" :key="item.name">
+                <v-sheet class="wrapper" color="white">
+                  <v-col cols="12" md="4">
                     <v-card
-                    class="mx-auto"
-                    max-width="400"
-                    shaped
+                        class="mx-auto"
+                        max-height="900"
+                        max-width="400"
+                        color="white"
+                        elevation="0"
                     >
+                      <div class="client-photo white--text align-end">
                         <v-img
-                        class="white--text align-end"
-                        height="200px"
-                        :src="item.src"
+                            class="rounded-circle"
+                            height="200px"
+                            width="200px"
+                            :src="item.src"
                         >
                         </v-img>
-                        <v-card-title class="title">{{ item.name }}</v-card-title>
-                        <v-card-subtitle class="pb-0 role">
-                            {{ item.role }}
+                      </div>
+
+                      <v-card-title class="title card-title pb-5">{{ item.name }}</v-card-title>
+                        <v-card-subtitle class="pb-0" style="color: black; font-weight:bold">
+                          {{ item.role }}
                         </v-card-subtitle>
 
-                        <v-card-text class="text--primary">
-                            <div>" {{ item.testimony }} "</div>
-                        </v-card-text>
-
-   
+                      <v-card-text class="text--primary card-testimonial">
+                        <div>" {{ item.testimony }} "</div>
+                      </v-card-text>
                     </v-card>
-                </v-col>
-            </v-row>
+                  </v-col>
+                </v-sheet>
+              </v-carousel-item>
+
+            </v-carousel>
         </v-container>
     </div>
 </template>
@@ -48,8 +56,7 @@ export default {
                   src: require('../assets/images/Andin.jpg'),
                   role:"Tech Lead - Today's Artisans",
                   testimony:"Sempre contratamos o Anderson para salvar os momentos importantes dos eventos de nossa empresa. É um profissional dedicado , eu diria diferenciado , conversando sempre abertamente com o cliente , e sempre propondo ideias para melhorias."
-                },
-                
+                }
             ]
         }
     }
@@ -66,5 +73,14 @@ export default {
         justify-content: center;
         padding:40px;
     }
-
+    .client-photo{
+      padding-left: 60px;
+    }
+    .card-title {
+      color: black;
+    }
+    .card-testimonial {
+      font-style: italic;
+      font-weight: bold;
+    }
 </style>
